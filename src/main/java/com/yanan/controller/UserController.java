@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.yanan.core.service.UserService;
 
@@ -31,5 +32,10 @@ public class UserController {
 		return map;
 	}
 	
-	
+	@RequestMapping("/getuser22")
+	@ResponseBody
+	public ModelAndView  getUse22r(ModelAndView view) {
+		view.setViewName("index222");
+		return view ;
+	}
 }
